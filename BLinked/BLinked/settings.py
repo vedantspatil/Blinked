@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'feed.apps.FeedConfig',
+    'jobs.apps.JobsConfig',
+    'blink.apps.BlinkConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

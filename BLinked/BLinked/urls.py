@@ -18,5 +18,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('feed/', include('feed.urls')),
+    path('jobs/', include('jobs.urls')),
+    path('', include('blink.urls')),
     path('admin/', admin.site.urls),
 ]

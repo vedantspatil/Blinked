@@ -3,13 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 
 def index(request):
-    template = loader.get_template('feed/blog.html')
+    template = loader.get_template('contact/contact.html')
     context = {
     }
     return HttpResponse(template.render(context, request))
 
-def blog(request, blogId):
-    template = loader.get_template('feed/single-blog.html')
-    context = {
-    }
-    return HttpResponse(template.render(context, request))

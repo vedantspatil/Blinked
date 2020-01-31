@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'feed.apps.FeedConfig',
     'jobs.apps.JobsConfig',
     'blink.apps.BlinkConfig',
+    'contact.apps.ContactConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

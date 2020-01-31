@@ -8,3 +8,9 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+
+def job(request, jobId):
+    template = loader.get_template('jobs/job_details.html')
+    context = {
+    }
+    return HttpResponse(template.render(context, request))

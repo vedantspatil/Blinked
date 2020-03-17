@@ -36,7 +36,10 @@ def signup(request):
     :param request: Request object from client
     :return: sign up page
     """
+
     template = loader.get_template('blink/signup.html')
     context = {
+
+
     }
     return HttpResponse(template.render(context, request))

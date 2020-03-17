@@ -21,5 +21,7 @@ urlpatterns = [
     path('jobs/', include('jobs.urls')),
     path('', include('blink.urls')),
     path('contact/', include('contact.urls')),
+    path('profile/', include('userprofile.urls')),
+    path('check/', include('demoCheck.urls')),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,9 @@
+<form method="post" action="#" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>Upload JSON Certificate</p>
+    <input type="file" name="json" autocomplete="off" required>
+
+    <button type="submit"
+            style="border-bottom: #1ac9e4 4px solid;">Verify
+    </button>
+</form>

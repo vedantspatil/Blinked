@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'jobs.apps.JobsConfig',
     'blink.apps.BlinkConfig',
     'contact.apps.ContactConfig',
+    'userprofile.apps.UserprofileConfig',
+    'demoCheck.apps.DemocheckConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

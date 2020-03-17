@@ -109,6 +109,7 @@
         <![endif]-->
 
 <!-- header-start -->
+
 <header>
     <div class="header-area ">
         <div id="sticky-header" class="main-header-area">
@@ -171,9 +172,24 @@
 <!-- header-end -->
 
 
+{% if messages %}
+    <div class="container mt-5 pt-5">
+        {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message | safe }}
+            </div>
+        {% endfor %}
+        <br>
+    </div>
+{% endif %}
+
+
+
 {% block content %}
 {% endblock %}
-
 
 <!-- footer start -->
 <footer class="footer">

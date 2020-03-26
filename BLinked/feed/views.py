@@ -11,6 +11,8 @@ def index(request):
     """
     template = loader.get_template('feed/blog.html')
     context = {
+        'page': 'blog',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))
 
@@ -24,5 +26,7 @@ def blog(request, blogId):
     """
     template = loader.get_template('feed/single-blog.html')
     context = {
+        'page': 'single blog',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))

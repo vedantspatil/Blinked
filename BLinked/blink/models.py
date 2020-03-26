@@ -28,6 +28,9 @@ class User(models.Model):
     profilePhoto = models.ImageField(default="https://userpic.codeforces.com/no-avatar.jpg", blank=True, null=True,
                                      # optional in both form and db
                                      upload_to="profilePhoto/%Y/%m/%D/")
+
+    mobileNumber = models.CharField(default="", max_length=20, null=True, blank=True)
+    address = models.TextField(default="", null=True, blank=True)
     summary = models.TextField(default="", null=True, blank=True)
 
     def __str__(self):
@@ -59,6 +62,7 @@ class Education(models.Model):
     endYear = models.IntegerField(null=True, blank=True)
     certificate = models.TextField()
     additionalNotes = models.TextField(default="", null=True, blank=True)
+    legitimate = models.BooleanField(default=True)
 
     def __str__(self):
         return "{} ({})".format(self.user.username, self.degree)

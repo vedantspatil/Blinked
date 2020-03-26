@@ -145,15 +145,25 @@
                                             -->
                                         </li>
                                         <li><a href="/contact">Contact</a></li>
+                                        {% if user.is_authenticated %}
+                                            <li><a href="/profile/{{ user.username }}">Profile</a></li>
+                                        {% endif %}
+
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="Appointment">
-                                <div class="phone_num d-none d-xl-block">
-                                    <a href="/login">Log in</a>
-                                </div>
+                                {% if user.is_authenticated %}
+                                    <div class="phone_num d-none d-xl-block">
+                                        <a href="/logout">Logout</a>
+                                    </div>
+                                {% else %}
+                                    <div class="phone_num d-none d-xl-block">
+                                        <a href="/login">Log in</a>
+                                    </div>
+                                {% endif %}
                                 <div class="d-none d-lg-block">
                                     <a class="boxed-btn3" href="#">Post a Job</a>
                                 </div>
@@ -172,24 +182,22 @@
 <!-- header-end -->
 
 
-{% if messages %}
-    <div class="container mt-5 pt-5">
-        {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                {{ message | safe }}
-            </div>
-        {% endfor %}
-        <br>
-    </div>
-{% endif %}
+{% include "feed/partials/bradcam.html" with heading=page %}
+<div class="container-lg">
+    {% if messages %}
+        <div class="container mt-5 pt-5">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                    <a class="close" href="#" data-dismiss="alert">×</a>
+                    {{ message | safe }}
+                </div>
+            {% endfor %}
+        </div>
 
-
-
-{% block content %}
-{% endblock %}
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+</div>
 
 <!-- footer start -->
 <footer class="footer">

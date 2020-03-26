@@ -4,6 +4,7 @@ from django.template import loader
 from django.contrib.auth.models import User as AuthUser
 from blink.models import User
 from django.contrib import messages
+from django.contrib.auth import authenticate, login as Login, logout as Logout
 
 
 def index(request):
@@ -15,26 +16,48 @@ def index(request):
     """
     template = loader.get_template('blink/index.html')
     context = {
+        'page': 'Blinked',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))
 
 
 def login(request):
     """
-    renders login page and logs in the client
+    logs in the client
 
     :param request: Request object from client
     :return: login page
     """
     template = loader.get_template('blink/login.html')
+    if request.POST:
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            print("yes")
+            Login(request, user)
+            messages.success(request, "You are successfully logged in")
+            return HttpResponseRedirect("/")
+        else:  # invalid user so same page
+            context = {
+                'page': 'login',
+                'user': user,
+                'error': 'Invalid handle or password',
+            }
+            messages.error(request, 'Invalid username or password')
+            return HttpResponse(template.render(context, request))
+
     context = {
+        'page': 'login',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))
 
 
 def signup(request):
     """
-    renders sign up page and registers the user
+    registers the user
 
     :param request: Request object from client
     :return: sign up page
@@ -58,9 +81,19 @@ def signup(request):
         except AuthUser.DoesNotExist:
             AuthUser.objects.create_user(username=username, password=password)
             User(username=username, password=password).save()
-            print("yes")
             return HttpResponseRedirect("/")
     context = {
-        'user': None,
+        'page': 'sign up',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))
+
+def logout(request):
+    """
+    logs out the user
+    :param request: Request object from client
+    :return: index page
+    """
+    Logout(request)
+    return HttpResponseRedirect("/")
+

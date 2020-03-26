@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading{{ number }}">
+        <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+               href="#collapse{{ number }}" aria-expanded="false"
+               aria-controls="collapse{{ number }}">{{ degree }} in {{ fieldOfStudy }}
+            </a>
+        </h4>
+        <h4>
+            {{ legitimate }}
+        </h4>
+    </div>
+    <div id="collapse{{ number }}" class="panel-collapse collapse" role="tabpanel"
+         aria-labelledby="heading{{ number }}">
+        <div class="panel-body">
+            <p>{{ schoolName }}</p>
+            <p>{{ startYear }} - {{ endYear }}</p>
+            <p>{{ schoolDescription }}</p>
+        </div>
+    </div>
+</div>

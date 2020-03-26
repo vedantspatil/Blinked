@@ -11,6 +11,8 @@ def index(request):
     """
     template = loader.get_template('jobs/jobs.html')
     context = {
+        'page': 'jobs',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))
 
@@ -25,5 +27,7 @@ def job(request, jobId):
     """
     template = loader.get_template('jobs/job_details.html')
     context = {
+        'page': 'Software Engineer',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))

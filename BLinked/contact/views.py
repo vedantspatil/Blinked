@@ -12,10 +12,12 @@ def index(request):
     :return: contact page
     """
 
-    messages.error(request, 'This handle is currently in use')
-    messages.success(request, 'Okay')
+    messages.error(request, "bad")
+    messages.error(request, "bad")
     template = loader.get_template('contact/contact.html')
     context = {
+        'page': 'contact',
+        'user': request.user,
     }
     return HttpResponse(template.render(context, request))
 

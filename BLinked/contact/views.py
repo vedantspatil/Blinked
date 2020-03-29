@@ -11,9 +11,6 @@ def index(request):
     :param request: request Object from Client
     :return: contact page
     """
-
-    messages.error(request, "bad")
-    messages.error(request, "bad")
     template = loader.get_template('contact/contact.html')
     context = {
         'page': 'contact',

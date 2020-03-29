@@ -39,6 +39,7 @@ def index(request, username):
 
     template = loader.get_template('userprofile/index.html')
     context = {
+        'page': 'profile',
         'user': request.user,
         'profileUser': profileUser,
         'degrees': degrees,

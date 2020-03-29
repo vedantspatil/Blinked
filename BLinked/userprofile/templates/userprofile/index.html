@@ -1,200 +1,88 @@
-<!DOCTYPE HTML>
-<html>
-<head>
+{% extends 'feed/base.html' %}
+{% block content %}
     {% load static %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jackson Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <meta name="author" content=""/>
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content=""/>
-    <meta name="twitter:image" content=""/>
-    <meta name="twitter:url" content=""/>
-    <meta name="twitter:card" content=""/>
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="{% static 'userprofile/css/animate.css' %}">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="{% static 'userprofile/css/icomoon.css' %}">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{% static 'userprofile/css/bootstrap.css' %}">
-    <!-- Flexslider  -->
-    <link rel="stylesheet" href="{% static 'userprofile/css/flexslider.css' %}">
-    <!-- Flaticons  -->
-    <link rel="stylesheet" href="{% static 'userprofile/fonts/flaticon/font/flaticon.css' %}">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="{% static 'userprofile/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'userprofile/css/owl.theme.default.min.css' %}">
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="{% static 'userprofile/css/style.css' %}">
-
-    <!-- Modernizr JS -->
-    <script src="{% static 'userprofile/js/modernizr-2.6.2.min.js' %}"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-	<script src="{% static 'userprofile/js/respond.min.js' %}"></script>
-	<![endif]-->
-
-</head>
-<body>
-{% if messages %}
-    <div class="container mt-5 pt-5">
-        {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                {{ message | safe }}
-            </div>
-        {% endfor %}
-        <br>
-    </div>
-{% endif %}
-<div id="colorlib-page">
-    <div class="container-wrap">
-        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
-           aria-expanded="false" aria-controls="navbar"><i></i></a>
-        <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-            <div class="text-center">
-                <div class="author-img" style="background-image: url({{ profileUser.profilePhoto }});"></div>
-                <h1 id="colorlib-logo"><a href="index.html">{{ profileUser.name }}</a></h1>
-            </div>
-            <nav id="colorlib-main-menu" role="navigation" class="navbar">
-                <div id="navbar" class="collapse">
-                    <ul>
-                        <li class="active"><a href="#" data-nav-section="home">Home</a></li>
-                        <li><a href="#" data-nav-section="about">About</a></li>
-                        <!--
-                        <li><a href="#" data-nav-section="services">Services</a></li>
-                        <li><a href="#" data-nav-section="skills">Skills</a></li>
-                        -->
-                        <li><a href="#" data-nav-section="education">Education</a></li>
-                        <!--
-                        <li><a href="#" data-nav-section="experience">Experience</a></li>
-                        <li><a href="#" data-nav-section="work">Work</a></li>
-                        <li><a href="#" data-nav-section="blog">Blog</a></li>
-                        -->
-                        <li><a href="#" data-nav-section="contact">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="colorlib-footer">
-                <p>
-                    <small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i>
-                        by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span>
-                        <span>Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span>
-                    </small>
-                </p>
-                <ul>
-                    <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin2"></i></a></li>
-                </ul>
-            </div>
-
-        </aside>
-
-        <div id="colorlib-main">
-            <section id="colorlib-hero" class="js-fullheight" data-section="home">
-                <div class="flexslider js-fullheight">
-                    <ul class="slides">
-                        <li style="background-image: url(/static/userprofile/images/img_bg_1.jpg);">
-                            <div class="overlay"></div>
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-                                        <div class="slider-text-inner js-fullheight">
-                                            <div class="desc">
-                                                <h1>Hi! <br>I'm {{ profileUser.name }}</h1>
-                                                <p><a class="btn btn-primary btn-learn">Download CV <i
-                                                        class="icon-download4"></i></a></p>
+    <div id="colorlib-page">
+        <div class="container-wrap">
+            <div class="container">
+                <section id="colorlib-hero" class="js-fullheight" data-section="home">
+                    <div class="flexslider js-fullheight">
+                        <ul class="slides">
+                            <li style="background-image: url(/static/userprofile/images/img_bg_1.jpg);">
+                                <div class="overlay"></div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                                            <div class="slider-text-inner js-fullheight">
+                                                <div class="desc">
+                                                    <h1>Hi! <br>I'm {{ profileUser.name }}</h1>
+                                                    <p><a class="btn btn-primary btn-learn">Download CV <i
+                                                            class="icon-download4"></i></a></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section class="colorlib-about" data-section="about">
-                <div class="colorlib-narrow-content">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                <div class="col-md-12">
-                                    <div class="about-desc">
-                                        <span class="heading-meta">About Us</span>
-                                        <h2 class="colorlib-heading">Who Am I?</h2>
-                                        <p>{{ profileUser.summary }}</p>
+                <section class="colorlib-about" data-section="about">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                                    <div class="col-md-12">
+                                        <div class="about-desc">
+                                            <span class="heading-meta">About Us</span>
+                                            <h2 class="colorlib-heading">Who Am I?</h2>
+                                            <p>{{ profileUser.summary }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="colorlib-education" data-section="education">
-                <div class="colorlib-narrow-content">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-                             data-animate-effect="fadeInLeft">
-                            <span class="heading-meta">Education</span>
-                            <h2 class="colorlib-heading animate-box">Education</h2>
+                <section class="colorlib-education" data-section="education">
+                    <div class="colorlib-narrow-content">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+                                 data-animate-effect="fadeInLeft">
+                                <span class="heading-meta">Education</span>
+                                <h2 class="colorlib-heading animate-box">Education</h2>
+                            </div>
                         </div>
+                        {% for degree in degrees %}
+                            {% include "userprofile/partials/education.html" with number=forloop.counter degree=degree.degree fieldOfStudy=degree.fieldOfStudy schoolName=degree.school.schoolName schoolDescription=degree.school.description startYear=degree.startYear endYear=degree.endYear legitimate=degree.legitimate %}
+                        {% endfor %}
                     </div>
-                    {% for degree in degrees %}
-                        {% include "userprofile/partials/education.html" with number=forloop.counter degree=degree.degree fieldOfStudy=degree.fieldOfStudy schoolName=degree.school.schoolName schoolDescription=degree.school.description startYear=degree.startYear endYear=degree.endYear legitimate=degree.legitimate %}
-                    {% endfor %}
-                </div>
-            </section>
-            {% include "userprofile/partials/contactInfo.html" with mobileNumber=profileUser.mobileNumber address=profileUser.address %}
+                </section>
+                {% include "userprofile/partials/contactInfo.html" with mobileNumber=profileUser.mobileNumber address=profileUser.address %}
 
-        </div><!-- end:colorlib-main -->
-    </div><!-- end:container-wrap -->
-</div><!-- end:colorlib-page -->
+            </div><!-- end:colorlib-main -->
+        </div><!-- end:container-wrap -->
+    </div><!-- end:colorlib-page -->
 
-<!-- jQuery -->
-<script src="{% static 'userprofile/js/jquery.min.js' %}"></script>
-<!-- jQuery Easing -->
-<script src="{% static 'userprofile/js/jquery.easing.1.3.js' %}"></script>
-<!-- Bootstrap -->
-<script src="{% static 'userprofile/js/bootstrap.min.js' %}"></script>
-<!-- Waypoints -->
-<script src="{% static 'userprofile/js/jquery.waypoints.min.js' %}"></script>
-<!-- Flexslider -->
-<script src="{% static 'userprofile/js/jquery.flexslider-min.js' %}"></script>
-<!-- Owl carousel -->
-<script src="{% static 'userprofile/js/owl.carousel.min.js' %}"></script>
-<!-- Counters -->
-<script src="{% static 'userprofile/js/jquery.countTo.js' %}"></script>
+    <!-- jQuery -->
+    <script src="{% static 'userprofile/js/jquery.min.js' %}"></script>
+    <!-- jQuery Easing -->
+    <script src="{% static 'userprofile/js/jquery.easing.1.3.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'userprofile/js/bootstrap.min.js' %}"></script>
+    <!-- Waypoints -->
+    <script src="{% static 'userprofile/js/jquery.waypoints.min.js' %}"></script>
+    <!-- Flexslider -->
+    <script src="{% static 'userprofile/js/jquery.flexslider-min.js' %}"></script>
+    <!-- Owl carousel -->
+    <script src="{% static 'userprofile/js/owl.carousel.min.js' %}"></script>
+    <!-- Counters -->
+    <script src="{% static 'userprofile/js/jquery.countTo.js' %}"></script>
 
 
-<!-- MAIN JS -->
-<script src="{% static 'userprofile/js/main.js' %}"></script>
+    <!-- MAIN JS -->
+    <script src="{% static 'userprofile/js/main.js' %}"></script>
 
-</body>
-</html>
-
+{% endblock %}

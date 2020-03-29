@@ -8,7 +8,58 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- profile header -->
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+
     {% load static %}
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{% static 'userprofile/css/animate.css' %}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{% static 'userprofile/css/icomoon.css' %}">
+
+    <!-- small fonts due to this-->
+    <!-- Bootstrap  -->
+    <!--
+    <link rel="stylesheet" href="{% static 'userprofile/css/bootstrap.css' %}">
+    -->
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="{% static 'userprofile/css/flexslider.css' %}">
+    <!-- Flaticons  -->
+    <link rel="stylesheet" href="{% static 'userprofile/fonts/flaticon/font/flaticon.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'userprofile/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'userprofile/css/owl.theme.default.min.css' %}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{% static 'userprofile/css/style.css' %}">
+
+    <!-- Modernizr JS -->
+    <script src="{% static 'userprofile/js/modernizr-2.6.2.min.js' %}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+	<script src="{% static 'userprofile/js/respond.min.js' %}"></script>
+	<![endif]-->
+
+
+
+
+
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'feed/img/favicon.png' %}">
@@ -129,13 +180,6 @@
                                     <ul id="navigation">
                                         <li><a href="/">home</a></li>
                                         <li><a href="/jobs">Browse Job</a></li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="candidate.html">Candidates </a></li>
-                                                <li><a href="job_details.html">job details </a></li>
-                                                <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
                                         <li><a href="/feed">blog <!-- update <i class="ti-angle-down"></i> --></a>
                                             <!-- update
                                             <ul class="submenu">

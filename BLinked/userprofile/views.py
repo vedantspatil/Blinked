@@ -5,7 +5,7 @@ from django.template import loader
 from django.contrib.auth.models import User as AuthUser
 from blink.models import User, Education, School
 from django.contrib import messages
-from .forms import EditDetailsForm
+from .forms import AddEducationForm, EditDetailsForm
 
 """
     Blockchain imports
@@ -46,8 +46,9 @@ def index(request, username):
     }
     return HttpResponse(template.render(context, request))
 
+
 @login_required
-def edit(request):
+def addEducation(request):
     """
     Edit profile page details
 
@@ -55,12 +56,11 @@ def edit(request):
     :return: edit page
     """
 
-    # temporary user -> abcd1234
-    user = User.objects.get(username="abcd1234")
+    user = request.user
 
     if request.method == 'POST':
 
-        form = EditDetailsForm(request.POST, request.FILES)
+        form = AddEducationForm(request.POST, request.FILES)
 
         if form.is_valid():
             schoolName = form.cleaned_data["schoolName"]
@@ -115,10 +115,44 @@ def edit(request):
             messages.error(request, "Field errors")
             return HttpResponseRedirect("#")
     elif request.method == 'GET':
-        form = EditDetailsForm()
+        form = AddEducationForm()
 
-    template = loader.get_template('userprofile/edit.html')
+    template = loader.get_template('userprofile/addEducation.html')
     context = {
+        'page': 'Add Education',
+        'user': request.user,
+        'form': form,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+@login_required
+def editDetails(request):
+    """
+    Edit profile page details
+
+    :param request: request from client
+    :return: edit page
+    """
+    user = request.user
+    bUser = User.objects.get(username=user.username)
+    if request.method == 'POST':
+
+        form = EditDetailsForm(request.POST, request.FILES, instance=bUser)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Data successfully updated")
+            return HttpResponseRedirect("/profile/{0}".format(user.username))
+        else:
+            messages.error(request, "Field errors")
+            return HttpResponseRedirect("#")
+    elif request.method == 'GET':
+        form = EditDetailsForm(instance=bUser)
+
+    template = loader.get_template('userprofile/editDetails.html')
+    context = {
+        'page': 'Edit Details',
         'user': request.user,
         'form': form,
     }

@@ -15,9 +15,12 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '6%ls^oh-j9u2a%e6m+e!+4upl8bfh&pyla2b7lzmjomf4j0!1g'
@@ -26,7 +29,6 @@ SECRET_KEY = '6%ls^oh-j9u2a%e6m+e!+4upl8bfh&pyla2b7lzmjomf4j0!1g'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'userprofile.apps.UserprofileConfig',
     'demoCheck.apps.DemocheckConfig',
     'crispy_forms',
+    'django_countries',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,7 +50,6 @@ INSTALLED_APPS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,7 +81,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'BLinked.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
@@ -89,7 +90,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -109,7 +109,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -123,7 +122,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
@@ -134,6 +132,7 @@ STATIC_URL = '/static/'
 """
 try:
     from django.contrib.messages import constants as messages
+
     MESSAGE_TAGS = {
         messages.DEBUG: 'alert-info',
         messages.INFO: 'alert-info',

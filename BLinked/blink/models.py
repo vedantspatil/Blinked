@@ -64,5 +64,6 @@ class Education(models.Model):
     additionalNotes = models.TextField(default="", null=True, blank=True)
     legitimate = models.BooleanField(default=True)
 
+
     def __str__(self):
         return "{} ({})".format(self.user.username, self.degree)

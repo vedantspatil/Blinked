@@ -25,6 +25,7 @@ def job(request, jobId):
     :param jobId: id of the job requested for
     :return: page of that specific jobID
     """
+
     template = loader.get_template('jobs/job_details.html')
     context = {
         'page': 'Software Engineer',

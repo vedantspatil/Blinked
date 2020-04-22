@@ -4,10 +4,12 @@
             <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                href="#collapse{{ number }}" aria-expanded="false"
                aria-controls="collapse{{ number }}">{{ degree }} in {{ fieldOfStudy }}
+                {% if legitimate %}
+                    <span>&#9989;</span>
+                {% else %}
+                <span>&#10060;</span>
+                {% endif %}
             </a>
-        </h4>
-        <h4>
-            {{ legitimate }}
         </h4>
     </div>
     <div id="collapse{{ number }}" class="panel-collapse collapse" role="tabpanel"

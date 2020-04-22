@@ -150,6 +150,11 @@
     <!--===============================================================================================-->
     <script src="{% static 'blink/js/main.js' %}"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'feed/blog/main.css' %}">
+
+
 </head>
 
 <body>
@@ -187,6 +192,7 @@
                                             -->
                                         </li>
                                         <li><a href="/contact">Contact</a></li>
+                            
                                         {% if user.is_authenticated %}
                                             <li><a href="/profile/{{ user.username }}">Profile</a></li>
                                         {% endif %}
@@ -222,7 +228,6 @@
     </div>
 </header>
 <!-- header-end -->
-
 
 {% include "feed/partials/bradcam.html" with heading=page %}
 <div class="container-lg">

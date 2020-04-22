@@ -50,13 +50,14 @@ def index(request, username):
 @login_required
 def addEducation(request):
     """
-    Edit profile page details
+    Add Education
 
     :param request: request from client
-    :return: edit page
+    :return: add education page
     """
 
     user = request.user
+    profileUser = User.objects.get(username=user.username)
 
     if request.method == 'POST':
 
@@ -103,6 +104,13 @@ def addEducation(request):
             except:
                 messages.error(request, "An error occured in blockchain")
                 return HttpResponseRedirect("#")
+
+
+            if schoolName != receiptJsonData["institution"] or profileUser.name != receiptJsonData[
+                "name"] or startYear != receiptJsonData["year"]:
+                messages.error(request, "Details provided were incorrect and doesn't match the certificate")
+                res = False
+
 
             legitimate = res
             Education(user=user, school=school, degree=degree, fieldOfStudy=fieldOfStudy, startYear=startYear,

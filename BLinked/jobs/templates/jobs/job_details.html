@@ -1,6 +1,7 @@
 {% extends 'feed/base.html' %}
 {% block content %}
     {% load static %}
+    {% static "feed/img/svg_icon/" as Imagebase %}
 
     <div class="job_details_area">
         <div class="container">
@@ -10,16 +11,16 @@
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
                                 <div class="thumb">
-                                    <img src="{% static 'feed/img/svg_icon/1.svg' %}" alt="">
+                                    <img src="{{ Imagebase }}{{ load_job.icon }}" alt="">
                                 </div>
                                 <div class="jobs_conetent">
-                                    <a href="#"><h4>Software Engineer</h4></a>
+                                    <a href="#"><h4>{{ load_job.title }}</h4></a>
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
-                                            <p><i class="fa fa-map-marker"></i> California, USA</p>
+                                            <p><i class="fa fa-map-marker"></i> {{ load_job.country }}</p>
                                         </div>
                                         <div class="location">
-                                            <p><i class="fa fa-clock-o"></i> Part-time</p>
+                                            <p><i class="fa fa-clock-o"></i> {{ load_job.type }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -34,14 +35,8 @@
                     <div class="descript_wrap white-bg">
                         <div class="single_wrap">
                             <h4>Job description</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                                need to be sure there isn't anything embarrassing.</p>
-                            <p>Variations of passages of lorem Ipsum available, but the majority have suffered
-                                alteration in some form, by injected humour, or randomised words which don't look even
-                                slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
-                                sure there isn't anything embarrassing.</p>
+                            <p></p>
+                            <p>{{ load_job.description }}</p>
                         </div>
                         <div class="single_wrap">
                             <h4>Responsibility</h4>
@@ -56,19 +51,22 @@
                         <div class="single_wrap">
                             <h4>Qualifications</h4>
                             <ul>
-                                <li>The applicants should have experience in the following areas.
-                                </li>
-                                <li>Have sound knowledge of commercial activities.</li>
-                                <li>Leadership, analytical, and problem-solving abilities.</li>
-                                <li>Should have vast knowledge in IAS/ IFRS, Company Act, Income Tax, VAT.</li>
+                                {% for qualification in qualifications %}
+                                    <li>{{ qualification.degree }}
+                                        {% if user.is_authenticated %}
+                                            {% if qualification.eligible %}
+                                                <span>&#9989;</span>
+                                            {% else %}
+                                                <span>&#10060;</span>
+                                            {% endif %}
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="single_wrap">
                             <h4>Benefits</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                                need to be sure there isn't anything embarrassing.</p>
+                            <p>{{ load_job.benefits }}</p>
                         </div>
                     </div>
                     <div class="apply_job_form white-bg">
@@ -126,11 +124,11 @@
                         </div>
                         <div class="job_content">
                             <ul>
-                                <li>Published on: <span>12 Nov, 2019</span></li>
-                                <li>Vacancy: <span>2 Position</span></li>
-                                <li>Salary: <span>50k - 120k/y</span></li>
-                                <li>Location: <span>California, USA</span></li>
-                                <li>Job Nature: <span> Full-time</span></li>
+                                <li>Published on: <span> {{ load_job.publish_date }}</span></li>
+                                <li>Vacancy: <span>{{ load_job.vacancy }} Position</span></li>
+                                <li>Salary: <span>{{ load_job.salary_min }}/y - {{ load_job.salary_max }}/y</span></li>
+                                <li>Location: <span>{{ load_job.country }}</span></li>
+                                <li>Job Nature: <span> {{ load_job.type }}</span></li>
                             </ul>
                         </div>
                     </div>

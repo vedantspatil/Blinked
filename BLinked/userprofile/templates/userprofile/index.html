@@ -68,9 +68,17 @@
                                 </h2>
                             </div>
                         </div>
-                        {% for degree in degrees %}
-                            {% include "userprofile/partials/education.html" with number=forloop.counter degree=degree.degree fieldOfStudy=degree.fieldOfStudy schoolName=degree.school.schoolName schoolDescription=degree.school.description startYear=degree.startYear endYear=degree.endYear legitimate=degree.legitimate %}
-                        {% endfor %}
+                        <div class="row">
+                            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="fancy-collapse-panel">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        {% for degree in degrees %}
+                                            {% include "userprofile/partials/education.html" with number=forloop.counter degree=degree.degree fieldOfStudy=degree.fieldOfStudy schoolName=degree.school.schoolName schoolDescription=degree.school.description startYear=degree.startYear endYear=degree.endYear legitimate=degree.legitimate %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 {% include "userprofile/partials/contactInfo.html" with mobileNumber=profileUser.mobileNumber address=profileUser.address %}

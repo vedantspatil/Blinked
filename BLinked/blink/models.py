@@ -1,5 +1,8 @@
 from django.db import models
 from django_countries.fields import CountryField
+from django.utils import timezone
+from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 # Create your models here.
@@ -67,3 +70,49 @@ class Education(models.Model):
 
     def __str__(self):
         return "{} ({})".format(self.user.username, self.degree)
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+    	return self.title
+
+    def get_absolute_url(self):
+    	return reverse('post-detail', kwargs={'pk': self.pk})
+
+
+class Job(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    icon = models.CharField(default="", max_length=200, null=True, blank=True)
+    title = models.CharField(default="", max_length=200, blank=True)
+    # location: str
+    country = CountryField(default="", null=True, blank=True)
+    TYPE_CHOICES = (
+        ('Full Time', 'Full Time'),
+        ('Part Time', 'Part Time'),
+    )
+    type = models.TextField(null=True, blank=True, choices=TYPE_CHOICES)
+    deadline = models.DateField(null=True, blank=True)
+    qualifications = models.TextField(default="Qualifications are adjustable", null=False, blank=False)
+    description = models.TextField()
+    publish_date = models.DateField(null=True, blank=True)
+    vacancy = models.IntegerField(null=True, blank=True)
+    salary_min = models.IntegerField(null=True, blank=True)
+    salary_max = models.IntegerField(null=True, blank=True)
+    benefits = models.TextField(default="", blank=True)
+
+    def __str__(self):
+        return "{} ({})".format(self.title, self.salary_max, self.country)
+
+
+class Qualification(models.Model):
+    job = models.ForeignKey(Job, on_delete=models.CASCADE)
+    degree = models.CharField(max_length=200)
+
+    def __str__(self):
+        return "{} ({})".format(self.job.title, self.degree)
+

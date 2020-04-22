@@ -8,8 +8,6 @@ WALLET_PRIVATE_KEY = '00fc171a1df903ad3c5840c8201c670ca7d8ac81d6b6f8ea90cfe6c549
 WALLET_ADDRESS = '0x3441B63fbAcb69Dca61780AECA639405a47DBe8A'
 
 ganache_url = "http://127.0.0.1:7545"
-registeredInstitutes = {"VJTI": 1, "KJSCE": 2, "IITB": 3}
-
 
 class Blockchain:
     def __init__(self):

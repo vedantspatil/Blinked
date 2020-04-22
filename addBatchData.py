@@ -6,20 +6,28 @@ from web3 import Web3
 import json
 from BLinked.demoCheck.contract_abi import abi
 
-universities = ['VJTI', 'IITB', 'KJSCE']
+universities = ['VJTI', 'IITB', 'IIMB']
 
 # Merkle Tree init
 mt = MerkleTools(hash_type='sha3_256')
 count = 0
-filename = 'VJTI_2016.csv'
+
+"""
+filename = 'VJTI_2016_BTECH.csv'
 
 institute = "VJTI"
+"""
+print("Enter the file name")
+filename = input()
+
+print("Enter the institute name")
+institute = input()
 
 with open(os.path.join('certificate', filename)) as File:
     reader = csv.reader(File)
     for row in reader:
-        # studentID CPI Name batch college
-        data = str(row[0]) + str(row[2]) + str(row[1]) + str(row[3]) + institute
+        # studentID CPI Name batch college degree
+        data = str(row[0]) + str(row[2]) + str(row[1]) + str(row[3]) + institute + str(row[5])
         batch = str(row[3])
         mt.add_leaf(data, do_hash=True)
         count += 1
@@ -40,7 +48,7 @@ WALLET_PRIVATE_KEY = '00fc171a1df903ad3c5840c8201c670ca7d8ac81d6b6f8ea90cfe6c549
 WALLET_ADDRESS = '0x3441B63fbAcb69Dca61780AECA639405a47DBe8A'
 
 ganache_url = "http://127.0.0.1:7545"
-registeredInstitutes = {"VJTI": 1, "KJSCE": 2, "IITB": 3}
+registeredInstitutes = {"VJTI": 1, "IIMB": 2, "IITB": 3}
 
 
 class Blockchain:
@@ -51,7 +59,7 @@ class Blockchain:
 
         self.contract = self.web3.eth.contract(address=CONTRACT_ADDR, abi=abi)
 
-        self.web3.eth.defaultAccount = self.web3.eth.accounts[1]
+        self.web3.eth.defaultAccount = self.web3.eth.accounts[registeredInstitutes[institute]]
         print("Connected to blockchain with account", self.web3.eth.defaultAccount)
 
     def addBatchMerkleRoot(self, batch, batchMerkleRoot):
@@ -79,10 +87,11 @@ with open(os.path.join('certificate', filename)) as File:
         data["year"] = str(row[3])
         data["studentId"] = str(row[0])
         data["institution"] = institute
+        data["degree"] = str(row[5])
         data["merklePath"] = mt.get_proof(itr)
         itr += 1
 
-        filename = str(row[1]) + '.json'
+        filename = str(row[1]) + ' ' + str(row[5]) + '.json'
 
         with open(os.path.join('json', filename), 'w') as json_file:
             json_file.write(json.dumps(data))

@@ -89,7 +89,7 @@ def addEducation(request):
             print(jsonName)
             print(receiptJsonData)
             data = receiptJsonData['studentId'] + receiptJsonData['cpi'] + receiptJsonData['name'] + \
-                   receiptJsonData['year'] + receiptJsonData['institution']
+                   receiptJsonData['year'] + receiptJsonData['institution'] + receiptJsonData['degree']
             print(data)
 
             data = data.encode()
@@ -106,14 +106,15 @@ def addEducation(request):
                 return HttpResponseRedirect("#")
 
 
-            if schoolName != receiptJsonData["institution"] or profileUser.name != receiptJsonData[
-                "name"] or startYear != receiptJsonData["year"]:
+            if schoolName.lower() != receiptJsonData["institution"].lower() or profileUser.name.lower() != \
+                    receiptJsonData[
+                        "name"].lower() or str(startYear) != str(receiptJsonData["year"]) or degree.lower() != receiptJsonData[
+                "degree"].lower():
                 messages.error(request, "Details provided were incorrect and doesn't match the certificate")
                 res = False
 
-
             legitimate = res
-            Education(user=user, school=school, degree=degree, fieldOfStudy=fieldOfStudy, startYear=startYear,
+            Education(user=profileUser, school=school, degree=degree, fieldOfStudy=fieldOfStudy, startYear=startYear,
                       endYear=endYear, certificate=receiptJsonData, additionalNotes=additionalNotes,
                       legitimate=legitimate).save()
 

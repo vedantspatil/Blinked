@@ -2,7 +2,7 @@ pragma solidity ^0.5.0;
 
 contract Credentials {
     // mapping from address to college name
-    mapping(address => bytes32) private institutes;
+    mapping(bytes32 => address) private institutes;
     // mapping from college+batchPeriod to merkle root
     mapping(bytes32 => bytes32) private batchMerkleRoots;
 
@@ -17,12 +17,12 @@ contract Credentials {
 
     // register new institute
     function registerInstitute(string memory _instituteName) public {
-        institutes[msg.sender] = hash(_instituteName);
+        institutes[hash(_instituteName)] = msg.sender;
     }
 
     // add root for institute+batch
     function addBatchMerkleRoot(string memory _instituteName, string memory _batchPeriod, string memory _merkleRoot) public {
-        require(institutes[msg.sender] == hash(_instituteName));
+        require(institutes[ hash(_instituteName)] == msg.sender);
         batchMerkleRoots[hash(_instituteName, _batchPeriod)] = hash(_merkleRoot);
     }
 

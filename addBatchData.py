@@ -76,6 +76,7 @@ try:
     print("successfully added")
 except:
     print("Institute not registered!")
+    exit(0)
 
 
 itr = 0

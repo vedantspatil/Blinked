@@ -69,6 +69,7 @@
                             <p>{{ load_job.benefits }}</p>
                         </div>
                     </div>
+                {% if canApply %}
                     <div class="apply_job_form white-bg">
                         <h4>Apply for the job</h4>
                         <form action="#">
@@ -116,6 +117,9 @@
                             </div>
                         </form>
                     </div>
+                {% else %}
+                    <h4 style="color:red">Sorry you are not eligible for this job.</h4>
+                {% endif %}
                 </div>
                 <div class="col-lg-4">
                     <div class="job_sumary">

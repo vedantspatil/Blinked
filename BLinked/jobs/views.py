@@ -36,18 +36,26 @@ def job(request, jobId):
 
     qualifications = []
 
+
+    canApply = True
+
     for degree in degrees:
         eligible = False
         if profileUser:
             education = Education.objects.filter(user=profileUser, degree=degree.degree)
             if education.exists() and education[0].legitimate:
                 eligible = True
+        canApply = canApply and eligible
         qualifications.append({'degree': degree.degree, 'eligible': eligible})
+
+    if profileUser is None:
+        canApply = True
 
     template = loader.get_template('jobs/job_details.html')
     context = {
         'page': myJob.title,
         'load_job': myJob,
-        'qualifications': qualifications
+        'qualifications': qualifications,
+        'canApply': canApply
     }
     return HttpResponse(template.render(context, request))

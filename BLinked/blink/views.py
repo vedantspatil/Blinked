@@ -5,6 +5,7 @@ from django.contrib.auth.models import User as AuthUser
 from blink.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as Login, logout as Logout
+from passlib.hash import pbkdf2_sha256
 
 
 def index(request):
@@ -80,13 +81,18 @@ def signup(request):
 
         except AuthUser.DoesNotExist:
             AuthUser.objects.create_user(username=username, password=password)
-            User(username=username, password=password).save()
+            encPassword = pbkdf2_sha256.encrypt(password, rounds=120000, salt_size=32)
+
+            User(username=username, password=encPassword).save()
+            messages.success(request, "You have successfully signed up")
+
             return HttpResponseRedirect("/")
     context = {
         'page': 'sign up',
         'user': request.user,
     }
     return HttpResponse(template.render(context, request))
+
 
 def logout(request):
     """
@@ -96,4 +102,3 @@ def logout(request):
     """
     Logout(request)
     return HttpResponseRedirect("/")
-

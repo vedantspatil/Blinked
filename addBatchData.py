@@ -77,6 +77,7 @@ try:
 except:
     print("Institute not registered!")
 
+
 itr = 0
 with open(os.path.join('certificate', filename)) as File:
     reader = csv.reader(File)

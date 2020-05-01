@@ -1,3 +1,5 @@
+#src - https://github.com/Tierion/pymerkletools/blob/master/merkletools/__init__.py
+
 import hashlib
 import binascii
 import codecs

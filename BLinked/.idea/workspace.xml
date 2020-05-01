@@ -10,10 +10,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36d3bc45-6b30-4753-84d5-a300aab9a10f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blink/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blink/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/static/feed/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/feed/static/feed/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/job_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/job_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userprofile/blockchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/userprofile/blockchain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userprofile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userprofile/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userprofile/merkletools.py" beforeDir="false" afterPath="$PROJECT_DIR$/userprofile/merkletools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addBatchData.py" beforeDir="false" afterPath="$PROJECT_DIR$/../addBatchData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/ABHISHEK TOSHNIWAL MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/ADITYA GAWHALE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/ADITYA KHARADE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/ADITYA SOOD MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/AKASH TICKOO MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/AMEYA GUJAR MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/ANKIT BHAD MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/ANSH BILIMORIA MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/APURVA VAJE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/BHAVIK DHODI MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/DARSHI SHAH MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/DEVANG MASRAM MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/DEVANGI BHUVA MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/DHIRAJ BHOI MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/DIPIKA GUHE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/DISHANT JAIN MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/JAINAM SHAH MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/KAJAL DADAS MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/KRUTIKA PATIL MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/MAMTA JADHAV MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/MEHUL GOHIL MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/MRUNMAYEE DHAPRE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/MUGDHA BHAGWAT MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/NAINA KHANKAR MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/NINAD CHINTAWAR MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/NISHIT NADGERE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/PADMASHREE SAMANT MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/PRACHI SARWADE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/PRACHITI PARKAR MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/PRATIKSHA MISHRA MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/RAJ CHHEDA MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/RISHABH BANSAL MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/SAMKIT SHAH MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/SANSKRUTI BIJWE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/SAYLI SARVADE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/SHRAVAN MAHAJAN MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/SHUBHAM JAGNADE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/SIDDHANT DESHMUKH MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/SUDARSHAN ZINJURDE MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/VAIDEHI RAUT MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/VEDANT PATIL MBA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../json/ZEEL THAKKAR MBA.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +71,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jobs/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userprofile/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
+            <state relative-caret-position="1904">
+              <caret line="157" column="23" lean-forward="true" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -36,19 +92,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/views.py">
+        <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/job_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="2227">
+              <caret line="131" column="48" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blink/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userprofile/merkletools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/userprofile/blockchain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="289">
+              <caret line="17" column="64" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="64" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -56,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/feed/templates/feed/base.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userprofile/contract_abi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="176" column="36" lean-forward="true" selection-start-line="176" selection-start-column="36" selection-end-line="176" selection-end-column="36" />
+            <state relative-caret-position="374">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -68,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blink/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="108" column="74" lean-forward="true" selection-start-line="108" selection-start-column="74" selection-end-line="108" selection-end-column="74" />
+            <state relative-caret-position="272">
+              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -78,10 +155,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blink/templates/blink/signup.html">
+        <entry file="file://$PROJECT_DIR$/feed/templates/feed/blog/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="85">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/feed/templates/feed/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -98,8 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>we</find>
-      <find>we pro</find>
       <find>jobs</find>
       <find>job_det</find>
       <find>job_details.html</find>
@@ -128,6 +212,8 @@
       <find>qual</find>
       <find>user</find>
       <find>about</find>
+      <find>title</find>
+      <find>apply for</find>
     </findStrings>
     <replaceStrings>
       <replace>feed/img/</replace>
@@ -163,7 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/blink/templates/jobs/index.html" />
         <option value="$PROJECT_DIR$/jobs/urls.py" />
         <option value="$PROJECT_DIR$/contact/urls.py" />
         <option value="$PROJECT_DIR$/demoCheck/urls.py" />
@@ -176,7 +261,6 @@
         <option value="$PROJECT_DIR$/blink/templates/blink/signup.html" />
         <option value="$PROJECT_DIR$/blink/admin.py" />
         <option value="$PROJECT_DIR$/userprofile/templates/userprofile/partials/contactInfo.html" />
-        <option value="$PROJECT_DIR$/userprofile/contract_abi.py" />
         <option value="$PROJECT_DIR$/blink/templates/blink/login.html" />
         <option value="$PROJECT_DIR$/blink/urls.py" />
         <option value="$PROJECT_DIR$/contact/templates/contact/contact.html" />
@@ -205,15 +289,17 @@
         <option value="$PROJECT_DIR$/jobs/templates/jobs/jobs2.html" />
         <option value="$PROJECT_DIR$/blink/models.py" />
         <option value="$PROJECT_DIR$/jobs/admin.py" />
-        <option value="$PROJECT_DIR$/feed/templates/feed/base.html" />
-        <option value="$PROJECT_DIR$/blink/views.py" />
-        <option value="$PROJECT_DIR$/jobs/templates/jobs/job_details.html" />
         <option value="$PROJECT_DIR$/feed/urls.py" />
         <option value="$PROJECT_DIR$/feed/views.py" />
         <option value="$PROJECT_DIR$/feed/templates/feed/blog/base.html" />
         <option value="$PROJECT_DIR$/userprofile/views.py" />
-        <option value="$PROJECT_DIR$/jobs/views.py" />
         <option value="$PROJECT_DIR$/userprofile/blockchain.py" />
+        <option value="$PROJECT_DIR$/userprofile/contract_abi.py" />
+        <option value="$PROJECT_DIR$/userprofile/merkletools.py" />
+        <option value="$PROJECT_DIR$/feed/templates/feed/base.html" />
+        <option value="$PROJECT_DIR$/jobs/views.py" />
+        <option value="$PROJECT_DIR$/jobs/templates/jobs/job_details.html" />
+        <option value="$PROJECT_DIR$/blink/views.py" />
       </list>
     </option>
   </component>
@@ -243,20 +329,25 @@
             <path>
               <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
               <item name="BLinked" type="462c0819:PsiDirectoryNode" />
-              <item name="blink" type="462c0819:PsiDirectoryNode" />
+              <item name="BLinked" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BLinked" type="462c0819:PsiDirectoryNode" />
+              <item name="contact" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BLinked" type="462c0819:PsiDirectoryNode" />
+              <item name="contact" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
               <item name="BLinked" type="462c0819:PsiDirectoryNode" />
-              <item name="blink" type="462c0819:PsiDirectoryNode" />
+              <item name="contact" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="blink" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BLinked" type="462c0819:PsiDirectoryNode" />
-              <item name="BLinked" type="462c0819:PsiDirectoryNode" />
+              <item name="contact" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
@@ -294,6 +385,13 @@
               <item name="BLinked" type="462c0819:PsiDirectoryNode" />
               <item name="jobs" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BLinked" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BLinked" type="b2602c69:ProjectViewProjectNode" />
@@ -439,17 +537,25 @@
       <workItem from="1587498583238" duration="4336000" />
       <workItem from="1587544583699" duration="4176000" />
       <workItem from="1587567478645" duration="5339000" />
+      <workItem from="1587582168821" duration="215000" />
+      <workItem from="1587635656906" duration="600000" />
+      <workItem from="1587641502529" duration="5289000" />
+      <workItem from="1587657668841" duration="2488000" />
+      <workItem from="1587937504700" duration="32000" />
+      <workItem from="1587937606191" duration="1153000" />
+      <workItem from="1588070292154" duration="4390000" />
+      <workItem from="1588185694991" duration="969000" />
+      <workItem from="1588243543058" duration="2279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119252000" />
+    <option name="totallyTimeSpent" value="136667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21543624" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24496645" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -476,30 +582,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demoCheck/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/templates/contact/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/templates/feed/partials/bradcam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userprofile/templates/userprofile/edit.html" />
     <entry file="file://$PROJECT_DIR$/demoCheck/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -511,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contact/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userprofile/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -528,13 +600,6 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userprofile/Credentials.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -651,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/job_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userprofile/templates/userprofile/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -692,45 +750,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blink/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/jobs.html" />
-    <entry file="file://$PROJECT_DIR$/feed/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="e#1#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/jobs2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1343">
           <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/templates/feed/blog/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blink/templates/blink/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -783,47 +807,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blink/models.py">
+    <entry file="file://$PROJECT_DIR$/blink/templates/blink/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="108" column="74" lean-forward="true" selection-start-line="108" selection-start-column="74" selection-end-line="108" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state>
+          <caret selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userprofile/views.py">
+    <entry file="file://$PROJECT_DIR$/userprofile/Credentials.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="131" column="29" lean-forward="true" selection-start-line="131" selection-start-column="29" selection-end-line="131" selection-end-column="29" />
+        <state relative-caret-position="493">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/views.py">
+    <entry file="file://$PROJECT_DIR$/contact/templates/contact/contact.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="1292">
+          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userprofile/blockchain.py">
+    <entry file="file://$PROJECT_DIR$/jobs/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="85">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/job_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2227">
+          <caret line="131" column="48" selection-start-line="131" selection-start-column="48" selection-end-line="131" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blink/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userprofile/merkletools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userprofile/contract_abi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blink/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/templates/feed/blog/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feed/templates/feed/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="176" column="36" lean-forward="true" selection-start-line="176" selection-start-column="36" selection-end-line="176" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userprofile/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="157" column="23" lean-forward="true" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userprofile/blockchain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="64" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

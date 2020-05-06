@@ -43,8 +43,9 @@ def job(request, jobId):
         eligible = False
         if profileUser:
             education = Education.objects.filter(user=profileUser, degree=degree.degree)
-            if education.exists() and education[0].legitimate:
-                eligible = True
+            if education.exists():
+                for ed in education:
+                    eligible = eligible or ed.legitimate
         canApply = canApply and eligible
         qualifications.append({'degree': degree.degree, 'eligible': eligible})
 

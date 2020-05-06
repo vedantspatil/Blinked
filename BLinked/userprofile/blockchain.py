@@ -15,7 +15,7 @@ class Blockchain:
 
         self.contract = self.web3.eth.contract(address=CONTRACT_ADDR, abi=abi)
 
-        self.web3.eth.defaultAccount = self.web3.eth.accounts[0]
+        self.web3.eth.defaultAccount = self.web3.eth.accounts[4]
         print("Connected to blockchain with default account", self.web3.eth.defaultAccount)
 
     def verifyBatchMerkleRoot(self, institute, batch, batchMerkleRoot):

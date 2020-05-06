@@ -1,1 +1,10 @@
+Django
 django-countries
+passlib
+Werkzeug
+web3
+json
+binascii
+codecs
+sha3
+django-crispy-forms

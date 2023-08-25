@@ -62,5 +62,29 @@ The database has been designed to contain two categories of data:
    <img alt="wrkflow" src="https://github.com/vedantspatil/Blinked/assets/37808420/e47e4684-e29a-4389-94eb-5b156a907ea4" width="70%" height="70%">
 </picture>
 
-## DEMO VIDEO
+## BLOCKCHAIN VERIFIED ACADEMIC QUALIFICATIONS
+
+Our smart contract:
+The important functions are:
+1. register institute - An institute can register itself to the blockchain. This is mandatory for an institute and only after this can the institute upload any records.
+2. addBatchMerkleRoot - The institute creates a merkle tree of the batch of degrees and then uses this contract call to upload this merkel root on blockchain
+3. verifyBatchMerkleRoot - This checks whether given merkle root is same as the one stored onto the blockchain.
+
+## HOW DOES IT WORK
+The important aspects of the working are covered in these section. The functionality of the application can be broken down into following aspects.
+
+Issuance of digital certificate from Institute to students:
+1. Institute registers itself on the blockchain through the smart contract
+2. Institute creates a merkle tree of all the student's degree and uploads the merkel root on the blockchain.
+3. Institute issues digital certificate(JSON file) consisting of fields: cpi, name, year, student Id, institution, degree and merkel path(or proof which will be used to verify the legitimacy of the certificate).
+Creation of merkle tree helps to reduce the number of transactions, and save space, time and cost.
+
+Verification of the certificate in the portal:
+Now in order for a student to claim a degree from this Institute, he should have a json certificate which will be issued by the institution to the students. These certificates, along with the student details, contains a merkel path to a leaf node on the merkel tree. When verified the merkel path with the one uploaded by the Institute, the System determines if the claim of the user is valid.
+This is shown by a visual confirmation in the profile page.
+
+1. The user enter the details, and uploads the digital certificate.
+2. Using the merkel path in certificate, merkel root is obtained and then verifyBatchMerkelRoot contract call is made.
+3. This ensures that certificate is legit, so now comparison of certificate details and form details is done. If all of this are correct, then we add this education with green tick else a red cross.
+
 

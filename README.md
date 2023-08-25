@@ -1,5 +1,5 @@
 # BLINKED - BLOCKCHAIN BASED JOB PORTAL
-Connecting the world's professionals via a job portal where recruiters meet job applicants whose profiles are backed by a Blockchain ledger. All credentials are validated from the ledger of universities that are operating as half-node, making it impossible for individuals to fake their professional achievements. This is a **full-stack application** where users can perform a range of operations. 
+Connecting the world's professionals via a job portal where recruiters meet job applicants whose profiles are backed by a Blockchain ledger. All credentials are validated from the ledger of universities that are operating as half-node, making it impossible for individuals to fake their professional achievements. This is a **full-stack application** where users can perform a range of operations like networking, create connections, blogging, post jobs, apply for jobs etc. 
 
 
 Tech Stack -  Django, Blockchain 
@@ -87,4 +87,40 @@ This is shown by a visual confirmation in the profile page.
 2. Using the merkel path in certificate, merkel root is obtained and then verifyBatchMerkelRoot contract call is made.
 3. This ensures that certificate is legit, so now comparison of certificate details and form details is done. If all of this are correct, then we add this education with green tick else a red cross.
 
+## SNAPSHOTS OF THE APPLICATIONS
 
+### PROFILE PAGE
+
+<picture>
+   <img alt="profpage" src="https://github.com/vedantspatil/Blinked/assets/37808420/74f81ab0-459e-4af0-97d1-f1cdeb21aef3" width="50%" height="50%">
+</picture>
+
+### BROWSE JOBS
+
+<picture>
+   <img alt="browjobs" src="https://github.com/vedantspatil/Blinked/assets/37808420/661267e0-876a-4399-85ff-1872f49f1a2c" width="50%" height="50%">
+</picture>
+
+### APPLY FOR JOB
+
+<picture>
+   <img alt="applyjob" src="https://github.com/vedantspatil/Blinked/assets/37808420/3467e623-73c1-45d4-89a0-40a1c1bc517f" width="50%" height="50%">
+</picture>
+
+### BLOG
+
+<picture>
+   <img alt="blog" src="https://github.com/vedantspatil/Blinked/assets/37808420/fb909e18-9124-474e-ade3-fad3962a4971" width="50%" height="50%">
+</picture>
+
+
+## DEMO VIDEO
+
+The following short video gives a brief idea of the portal.
+
+
+https://github.com/vedantspatil/Blinked/assets/37808420/4bccc5dd-f561-42ea-ac76-50a5a4ee0cbd
+
+
+
+For an in depth explaination of the Blinked system and it's working head over to this link - https://drive.google.com/file/d/1pnHa70c4BYI3gIHEUZLHVWkprQf9qlU4/view?usp=sharing
